@@ -33,7 +33,7 @@ function App(props) {
               <Route path="resources" element={<ResourcesPage />} />
               <Route path="adopt" element={<PetPage />}>
                 <Route path={":petName"} element={<PetDetail/>}/>
-                <Route path="index" element={<PetList pets={pets} />} />
+                <Route index="/" element={<PetList pets={pets} />} />
               </Route>
               <Route path="*" element={<Navigate to={"adopt"} />} />
 

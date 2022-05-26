@@ -9,10 +9,14 @@ import SAMPLE_DOGS from '../data/dogs.json'; //a sample list of dogs (model)
 
 function PetDetail(props) {
 
-  const petNameString = useParams(); //REPLACE THIS WITH CORRECT VALUE
+  let thePetName = useParams().petName
 
-  //pretend we loaded external data    
+  const petNameString = thePetName; //REPLACE THIS WITH CORRECT VALUE
+
+  //pretend we loaded external data 
+  console.log(petNameString)   
   let pet =  _.find(SAMPLE_DOGS, {name: petNameString}); //find pet in data
+  console.log(pet)
 
   if(!pet) return <h2>No pet specified</h2> //if unspecified
 
