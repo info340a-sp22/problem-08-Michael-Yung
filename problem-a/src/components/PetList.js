@@ -26,7 +26,7 @@ function PetCard(props) {
         <div className="card-body">
           <h3 className="card-title">{pet.name}</h3>
           <p className="card-text">{pet.sex} {pet.breed}</p>
-          <button className="btn btn-primary"> <Link to={"/adopt/" + pet.name}>Meet {pet.name}</Link></button>
+          <Link className="btn btn-primary" to={"/adopt/" + pet.name}>Meet {pet.name}</Link>
         </div>
       </div>
     </div>
